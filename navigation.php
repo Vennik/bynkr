@@ -15,6 +15,7 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#messages"><span class="glyphicon glyphicon-envelope"></span>Messages</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
