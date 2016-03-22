@@ -121,14 +121,6 @@ form {
     background: #aeaeae;
 }
 
-.messages .between:first-child {
-    padding-top: 0;
-}
-
-.messages .between:first-child:before {
-    display: none;
-}
-
 .message h4 {
     margin-bottom: 0;
 }
