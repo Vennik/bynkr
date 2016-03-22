@@ -173,6 +173,8 @@ form {
     font-family: 'Glyphicons Halflings';
     margin-right: 10px;
     color: #ff6200;
+    position: relative;
+    top: 2px;
 }
 
 .submenu > li > a:hover,
@@ -183,8 +185,12 @@ form {
 }
 
 .submenu > li.active > a {
-    background-color: #ff6200;
+    background-color: #e75c00;
     color: #ffffff;
+}
+
+.submenu > li.active > a::before {
+    color: #fff;
 }
 
 .documents .page-header, .messages .page-header {
@@ -269,7 +275,7 @@ form {
 }
 
 .main-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;

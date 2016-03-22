@@ -12,13 +12,13 @@ $pages = [
 ?>
 
 <ul class="main-menu">
-    <li>
+    <li class="active">
         <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
             <?php
 
             foreach ($pages as $page) {
-                echo '<li><a href="' . $page['url'] . '">'.$page['name'].'</a></li>';
+                echo '<li' . ($components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">'.$page['name'].'</a></li>';
             }
 
             ?>
