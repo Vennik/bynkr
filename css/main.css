@@ -59,6 +59,12 @@ form {
     text-decoration: none;
 }
 
+.main-menu > li > a > span {
+    color: #ff6200;
+    width: 20%;
+    height: auto;
+}
+
 .main-menu > li > a:hover,
 .main-menu > li > a:focus,
 .main-menu > li > a:active {
@@ -69,6 +75,13 @@ form {
 .main-menu > li.active > a {
     background-color: #ff6200;
     color: #ffffff;
+}
+
+.menuicon {
+    width: 15%;
+    height: auto;
+    margin: 3px;
+    display: block;
 }
 
 .submenu {
