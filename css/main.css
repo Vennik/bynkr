@@ -2,6 +2,10 @@ body {
     padding: 70px 0 0;
 }
 
+.container {
+    width: 100% !important;
+}
+
 .navbar-default {
     background: #f60;
 }
@@ -12,6 +16,12 @@ body {
 
 .navbar-nav a {
     color: #fff !important;
+}
+
+.navbar-nav a span {
+    font-size: 20px;
+    float: left;
+    margin: -2px 0 0 0;
 }
 
 .navbar-nav .active a {
