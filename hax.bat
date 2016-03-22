@@ -1,4 +1,4 @@
-echo off
+@echo off
 ssh root@178.62.201.149 "./hax.sh"
 echo.
 echo "                  .-'''/.\"
