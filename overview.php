@@ -24,8 +24,17 @@
 
 <div class="container theme-showcase" role="main">
     <ul class="main-menu">
-        <li>Products</li>
-        <li>Correspondence</li>
+        <li>
+            <a href="#">Products</a>
+            <ul class="submenu">
+                <li><a href="loans.php">Loans</a></li>
+                <li><a href="mortgages.php">Mortgages</a></li>
+                <li><a href="leases.php">Leases</a></li>
+                <li><a href="insurances.php">Insurances</a></li>
+                <li><a href="credit-cards.php">Credit Cards</a></li>
+            </ul>
+        </li>
+        <li><a href="correspondence.php">Correspondence</a></li>
     </ul>
 </div>
 

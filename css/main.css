@@ -131,14 +131,65 @@ form {
     left: 0;
     height: 100%;
     width: 250px;
-    padding: 51px 0 0;
+    padding: 50px 0 0;
     list-style: none;
     border-right: 2px solid #ff6200;
     margin: 0;
 }
 
-.main-menu li {
+.main-menu > li > a {
+    display: block;
     padding: 10px 20px;
     font-size: 20px;
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+}
 
+.main-menu > li > a:hover,
+.main-menu > li > a:focus,
+.main-menu > li > a:active {
+    background-color: #fdb;
+    color: #000;
+}
+
+.main-menu > li.active > a {
+    background-color: #ff6200;
+    color: #ffffff;
+}
+
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #fdb;
+    border-bottom: 1px solid #fdb;
+}
+
+.submenu > li > a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #fed;
+    color: #000;
+    text-decoration: none;
+}
+
+.submenu > li > a::before {
+    content: "\e258";
+    font-family: 'Glyphicons Halflings';
+    margin-right: 10px;
+    color: #ff6200;
+}
+
+.submenu > li > a:hover,
+.submenu > li > a:focus,
+.submenu > li > a:active {
+    background-color: #fdb;
+    color: #000;
+}
+
+.submenu > li.active > a {
+    background-color: #ff6200;
+    color: #ffffff;
 }
