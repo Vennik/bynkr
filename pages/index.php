@@ -21,8 +21,8 @@ if (isset($_POST['email'])) {
 
         <form action="/" method="post">
             <div class="form-group">
-                <label for="login1">Email address</label>
-                <input type="email" name="email" class="form-control" id="login1" placeholder="Email">
+                <label for="login1">Username</label>
+                <input type="text" name="email" class="form-control" id="login1" placeholder="Username">
             </div>
             <div class="form-group">
                 <label for="login2">Password</label>
