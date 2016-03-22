@@ -201,7 +201,7 @@ form {
     color: #fff;
 }
 
-.documents .page-header, .messages .page-header {
+.documents .page-header, .messages-side .page-header {
     clear: both;
     padding-top: 10px;
     margin-top: 0;
@@ -261,14 +261,14 @@ form {
     color: #e75c00;
 }
 
-.messages .between {
+.messages-side .between {
     text-align: center;
     font-size: 20px;
     padding-top: 80px;
     position: relative;
 }
 
-.messages .between:before {
+.messages-side .between:before {
     content: '';
     position: absolute;
     left: 50%;

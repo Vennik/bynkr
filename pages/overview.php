@@ -104,7 +104,7 @@ $pages = [
         <!-- Col -->
         <div class="col-md-4">
 
-            <div class="messages">
+            <div class="messages-side">
 
                 <div class="page-header">
                     <h2>Correspondence</h2>
