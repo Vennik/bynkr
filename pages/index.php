@@ -1,3 +1,12 @@
+<?php
+
+if (isset($_POST['email'])) {
+    $_SESSION['email'] = $_POST['email'];
+    header('Location: /overview');
+}
+
+?>
+
 <!-- Container -->
 <div class="container">
 
@@ -10,10 +19,10 @@
             <h2>Login</h2>
         </div>
 
-        <form action="overview" method="post">
+        <form action="/" method="post">
             <div class="form-group">
                 <label for="login1">Email address</label>
-                <input type="email" class="form-control" id="login1" placeholder="Email">
+                <input type="email" name="email" class="form-control" id="login1" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="login2">Password</label>

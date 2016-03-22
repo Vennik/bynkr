@@ -50,6 +50,10 @@ body {
     margin: -7px 10px 0 0;
 }
 
+.navbar-default .navbar-text {
+    color: #ffffff;
+}
+
 form {
     padding-bottom: 30px;
 }
