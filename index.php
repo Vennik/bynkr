@@ -1,3 +1,26 @@
+<?php
+
+$uri = $_SERVER['REQUEST_URI'];
+$components = explode('/', trim($uri, '/'));
+
+if (empty($components[0])) {
+    $components[0] = 'index';
+}
+$page = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR . $components[0] . '.php';
+if (!file_exists($page)) {
+    $content = "$page is not found";
+    header("HTTP/1.0 404 Not Found");
+} else {
+    ob_start();
+
+    include $page;
+
+    $content = ob_get_contents();
+
+    ob_end_clean();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,43 +47,7 @@
 <?php require 'navigation.php' ?>
 
 <div class="container" role="main">
-
-    <!-- Row -->
-    <div class="row">
-
-        <div class="col-md-6 col-xs-12 pull-right">
-
-            <div class="page-header">
-                <h2>Login</h2>
-            </div>
-
-            <form action="overview.php" method="post">
-                <div class="form-group">
-                    <label for="login1">Email address</label>
-                    <input type="email" class="form-control" id="login1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="login2">Password</label>
-                    <input type="password" class="form-control" id="login2" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-default">Login</button>
-            </form>
-
-        </div>
-
-        <div class="col-md-6 col-xs-12">
-
-            <div class="jumbotron">
-                <h1>Bynkr</h1>
-                <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point
-                    to create something more unique by building on or modifying it.</p>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- End Row -->
-
+    <?= $content ?>
 </div>
 
 <!-- Bootstrap core JavaScript
