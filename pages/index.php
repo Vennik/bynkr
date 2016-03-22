@@ -38,7 +38,7 @@ if (isset($_POST['email'])) {
         <div class="jumbotron">
             <h1>bynkr</h1>
             <p>The bridge between you, your bank and your financial security.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            <p><a class="btn btn-orange btn-lg" href="#" role="button">Learn more</a></p>
         </div>
 
     </div>

@@ -54,7 +54,7 @@
                                 <td>22-3-2016</td>
                                 <td>20:00</td>
                                 <td><span class="label label-default">Call</span></td>
-                                <td>Dolor set <span class="badge">5</span></td>
+                                <td>Dolor set <span class="badge">1</span></td>
                             </tr>
                             </tbody>
                         </table>
