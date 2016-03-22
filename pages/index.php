@@ -1,3 +1,5 @@
+<!-- Container -->
+<div class="container">
 
 <!-- Row -->
 <div class="row">
@@ -25,12 +27,15 @@
     <div class="col-md-6 col-xs-12">
 
         <div class="jumbotron">
-            <h1>Bynkr</h1>
-            <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point
-                to create something more unique by building on or modifying it.</p>
+            <h1>bynkr</h1>
+            <p>The bridge between you, your bank and your financial security.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
         </div>
 
     </div>
 
 </div>
 <!-- End Row -->
+
+</div>
+<!-- End Container -->

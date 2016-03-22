@@ -2,10 +2,6 @@ body {
     padding: 70px 0 0;
 }
 
-.container {
-    width: 100% !important;
-}
-
 .navbar-default {
     background: #f60;
 }
@@ -296,7 +292,7 @@ form {
 }
 
 .menu-push {
-    padding-left: 270px;
+    padding-left: 265px;
 }
 
 .menuicon {

@@ -46,9 +46,7 @@ if (!file_exists($page)) {
 
 <?php require 'navigation.php' ?>
 
-<div class="container" role="main">
-    <?= $content ?>
-</div>
+<?= $content ?>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

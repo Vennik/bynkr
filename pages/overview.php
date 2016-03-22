@@ -12,12 +12,16 @@
     <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
 </ul>
 
-<div class="container menu-push" role="main">
+<div class="container-fluid menu-push" role="main">
     <!-- Row -->
     <div class="row">
 
+        <!-- Container -->
+        <div class="container-fluid">
+
         <!-- Col -->
         <div class="col-md-8">
+
 
             <div class="documents">
 
@@ -104,5 +108,8 @@
 
     </div>
     <!-- End Row -->
+
+    </div>
+    <!-- End Container -->
 
 </div>
