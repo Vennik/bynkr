@@ -72,11 +72,16 @@ form {
 }
 
 .submenu {
+    display: none;
     list-style: none;
     margin: 0;
     padding: 0;
     border-top: 1px solid #fdb;
     border-bottom: 1px solid #fdb;
+}
+
+.main-menu > li.active .submenu {
+    display: block;
 }
 
 .submenu > li > a {

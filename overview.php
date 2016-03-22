@@ -24,7 +24,7 @@
 <div class="container theme-showcase" role="main">
     <ul class="main-menu">
         <li>
-            <a href="#">Products</a>
+            <a href="#" class="dropdown">Products</a>
             <ul class="submenu">
                 <li><a href="loans.php">Loans</a></li>
                 <li><a href="mortgages.php">Mortgages</a></li>
@@ -38,7 +38,6 @@
     <div class="container" role="main">
 
     </div>
-
 </div>
 
 <!-- Bootstrap core JavaScript
