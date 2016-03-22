@@ -291,6 +291,10 @@ form {
     color: #ffffff;
 }
 
+.menu-push {
+    padding-left: 250px;
+}
+
 .menuicon {
     width: 15%;
     height: auto;
