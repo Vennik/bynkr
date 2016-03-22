@@ -56,7 +56,10 @@
 </nav>
 
 <div class="container theme-showcase" role="main">
-
+    <ul class="main-menu">
+        <li>Products</li>
+        <li>Correspondence</li>
+    </ul>
 </div>
 
 <!-- Bootstrap core JavaScript
