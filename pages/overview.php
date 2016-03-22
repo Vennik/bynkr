@@ -18,7 +18,7 @@ $pages = [
             <?php
 
             foreach ($pages as $page) {
-                echo '<li' . ($components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">'.$page['name'].'</a></li>';
+                echo '<li' . (isset($components[1]) && $components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">'.$page['name'].'</a></li>';
             }
 
             ?>
