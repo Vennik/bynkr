@@ -5,3 +5,13 @@ body {
 .navbar-brand {
     padding: 10px 15px;
 }
+
+form {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    form {
+        padding-bottom: 48px;
+    }
+}
