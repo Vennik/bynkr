@@ -1,6 +1,6 @@
 <ul class="main-menu">
     <li>
-        <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
+        <a href="overview/" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
             <li><a href="loans">Loans</a></li>
             <li><a href="mortgages">Mortgages</a></li>
