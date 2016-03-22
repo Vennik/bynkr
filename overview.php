@@ -25,7 +25,7 @@
 <div class="container theme-showcase" role="main">
     <ul class="main-menu">
         <li>
-            <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Products</a>
+            <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
             <ul class="submenu">
                 <li><a href="loans.php">Loans</a></li>
                 <li><a href="mortgages.php">Mortgages</a></li>
@@ -36,9 +36,10 @@
         </li>
         <li><a href="correspondence.php"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
     </ul>
-</div>
 
-<div class="container" role="main">
+    <div class="container" role="main">
+
+    </div>
 </div>
 
 <!-- Bootstrap core JavaScript
