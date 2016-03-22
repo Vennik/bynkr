@@ -5,8 +5,7 @@ $pages = [
     ['url' => 'mortgages', 'name' => 'Mortgages'],
     ['url' => 'leases', 'name' => 'Leases'],
     ['url' => 'insurances', 'name' => 'Insurances'],
-    ['url' => 'credit-cards', 'name' => 'Credit Cards'],
-    ['url' => 'loans', 'name' => 'Loans']
+    ['url' => 'credit-cards', 'name' => 'Credit Cards']
 ];
 
 ?>
