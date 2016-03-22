@@ -12,18 +12,19 @@
     <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
 </ul>
 
-<div class="container menu-push" role="main">
-    <!-- Row -->
-    <div class="row">
+<div class="menu-push">
+    <div class="container-fluid" role="main">
+        <!-- Row -->
+        <div class="row">
 
-        <!-- Col -->
-        <div class="col-md-8">
+            <!-- Col -->
+            <div class="col-md-8">
 
-            <div class="documents">
+                <div class="documents">
 
-                <div class="page-header">
-                    <h2>Correspondence</h2>
-                </div>
+                    <div class="page-header">
+                        <h2>Correspondence</h2>
+                    </div>
 
                     <!-- Table -->
                     <table class="table">
@@ -33,12 +34,12 @@
                                 <th class="col-md-1">Date</th>
                                 <th class="col-md-1">Time</th>
                                 <th class="col-md-1">Platform</th>
-                                <th class="col-md-10">Title </th>
+                                <th class="col-md-10">Title</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr class="even">
-                                <td >22-3-2016</td>
+                                <td>22-3-2016</td>
                                 <td>18:00</td>
                                 <td><span class="label label-success">Whatsapp</span></td>
                                 <td>lorem ipsum <span class="badge">4</span></td>
@@ -59,20 +60,19 @@
                         </table>
                     </table>
 
-            </div>
-
-        </div>
-        <!-- End Col -->
-
-        <!-- Col -->
-        <div class="col-md-4">
-
-            <div class="messages">
-
-                <div class="page-header">
-                    <h2>Conversation</h2>
                 </div>
-                <div class="container">
+
+            </div>
+            <!-- End Col -->
+
+            <!-- Col -->
+            <div class="col-md-4">
+
+                <div class="messages">
+
+                    <div class="page-header">
+                        <h2>Conversation</h2>
+                    </div>
                     <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
                         <div class="col-xs-12 col-md-12">
                             <div class="panel panel-default">
@@ -86,7 +86,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -112,7 +114,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -136,7 +140,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -160,7 +166,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -184,7 +192,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -208,7 +218,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -232,7 +244,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -256,7 +270,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -280,7 +296,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -304,7 +322,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -328,7 +348,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                                            <img
+                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                class=" img-responsive ">
                                         </div>
                                     </div>
                                     <div class="row msg_container base_receive">
@@ -365,14 +387,16 @@
                             <li><a href="#"><span class="glyphicon glyphicon-eye-close"></span> Invisivel</a></li>
                         </ul>
                     </div>
+
+                    <div class="clearfix"></div>
+
                 </div>
 
             </div>
+            <!-- End Col -->
 
         </div>
-        <!-- End Col -->
+        <!-- End Row -->
 
     </div>
-    <!-- End Row -->
-
 </div>

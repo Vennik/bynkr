@@ -65,7 +65,7 @@ form {
 }
 
 .main-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -74,6 +74,8 @@ form {
     list-style: none;
     border-right: 2px solid #ff6200;
     margin: 0;
+    background-color: #fff;
+    z-index: 999;
 }
 
 .main-menu > li > a {
@@ -278,46 +280,8 @@ form {
     margin-bottom: 0;
 }
 
-.main-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    padding: 50px 0 0;
-    list-style: none;
-    border-right: 2px solid #ff6200;
-    margin: 0;
-}
-
-.main-menu > li > a {
-    display: block;
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: #ffffff;
-    color: #000;
-    text-decoration: none;
-}
-
-.main-menu > li > a > span {
-    color: #ff6200;
-    width: 20%;
-    height: auto;
-}
-
-.main-menu > li > a:hover,
-.main-menu > li > a:focus,
-.main-menu > li > a:active {
-    background-color: #fdb;
-    color: #000;
-}
-
-.main-menu > li.active > a {
-    background-color: #ff6200;
-    color: #ffffff;
-}
-
 .menu-push {
+    position: relative;
     padding-left: 265px;
 }
 
