@@ -1,3 +1,14 @@
+<?php
+
+if (isset($_POST['email'])) {
+    $_SESSION['email'] = $_POST['email'];
+    header('Location: /overview');
+}
+
+?>
+
+<!-- Container -->
+<div class="container">
 
 <!-- Row -->
 <div class="row">
@@ -8,10 +19,10 @@
             <h2>Login</h2>
         </div>
 
-        <form action="overview" method="post">
+        <form action="/" method="post">
             <div class="form-group">
                 <label for="login1">Email address</label>
-                <input type="email" class="form-control" id="login1" placeholder="Email">
+                <input type="email" name="email" class="form-control" id="login1" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="login2">Password</label>
@@ -25,12 +36,15 @@
     <div class="col-md-6 col-xs-12">
 
         <div class="jumbotron">
-            <h1>Bynkr</h1>
-            <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point
-                to create something more unique by building on or modifying it.</p>
+            <h1>bynkr</h1>
+            <p>The bridge between you, your bank and your financial security.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
         </div>
 
     </div>
 
 </div>
 <!-- End Row -->
+
+</div>
+<!-- End Container -->

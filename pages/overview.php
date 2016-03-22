@@ -1,23 +1,41 @@
+<?php
+
+$pages = [
+    ['url' => 'loans', 'name' => 'Loans'],
+    ['url' => 'mortgages', 'name' => 'Mortgages'],
+    ['url' => 'leases', 'name' => 'Leases'],
+    ['url' => 'insurances', 'name' => 'Insurances'],
+    ['url' => 'credit-cards', 'name' => 'Credit Cards']
+];
+
+?>
+
 <ul class="main-menu">
-    <li>
+    <li class="active">
         <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
-            <li><a href="loans">Loans</a></li>
-            <li><a href="mortgages">Mortgages</a></li>
-            <li><a href="leases">Leases</a></li>
-            <li><a href="insurances">Insurances</a></li>
-            <li><a href="credit-cards">Credit Cards</a></li>
+            <?php
+
+            foreach ($pages as $page) {
+                echo '<li' . (isset($components[1]) && $components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">'.$page['name'].'</a></li>';
+            }
+
+            ?>
         </ul>
     </li>
     <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
 </ul>
 
-<div class="container menu-push" role="main">
+<div class="container-fluid menu-push" role="main">
     <!-- Row -->
     <div class="row">
 
+        <!-- Container -->
+        <div class="container-fluid">
+
         <!-- Col -->
         <div class="col-md-8">
+
 
             <div class="documents">
 
@@ -25,39 +43,31 @@
                     <h2>ING documents</h2>
                 </div>
 
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
+                <?php
+
+                $icons = ['glyphicon-file', 'glyphicon-tag', 'glyphicon-briefcase', 'glyphicon-euro'];
+                $files = ['filename.png', 'a-very-long-filename.png', 'test.jpg'];
+                $amount = rand(5, 10);
+
+                for ($i = 0; $i < $amount; $i++) {
+                    echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
+                }
+
+                ?>
 
                 <div class="page-header">
                     <h2>Personal documents</h2>
                 </div>
 
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>filename.png</p></a>
-                <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
-                    <p>a-very-long-filename.png</p></a>
+                <?php
+
+                $amount = rand(2, 5);
+
+                for ($i = 0; $i < $amount; $i++) {
+                    echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
+                }
+
+                ?>
 
             </div>
 
@@ -112,5 +122,8 @@
 
     </div>
     <!-- End Row -->
+
+    </div>
+    <!-- End Container -->
 
 </div>

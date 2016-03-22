@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $uri = $_SERVER['REQUEST_URI'];
 $components = explode('/', trim($uri, '/'));
 
@@ -30,6 +32,7 @@ if (!file_exists($page)) {
     <link rel="icon" href="images/favicon.ico">
 
     <title>Bynkr</title>
+    <base href="/">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,9 +49,7 @@ if (!file_exists($page)) {
 
 <?php require 'navigation.php' ?>
 
-<div class="container" role="main">
-    <?= $content ?>
-</div>
+<?= $content ?>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
