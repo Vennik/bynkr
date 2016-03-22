@@ -48,8 +48,10 @@ form {
     }
 }
 
-.documents {
-
+.documents .page-header, .messages .page-header {
+    clear: both;
+    padding-top: 10px;
+    margin-top: 0;
 }
 
 .document {
@@ -84,4 +86,49 @@ form {
 
 .document .glyphicon-file {
     left: 5px;
+}
+
+.message {
+    text-align: center;
+    text-decoration: none !important;
+    color: #f60;
+}
+
+.message h4 span {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.message:hover {
+    color: #e75c00;
+}
+
+.messages .between {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 80px;
+    position: relative;
+}
+
+.messages .between:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    width: 1px;
+    height: 60px;
+    background: #aeaeae;
+}
+
+.messages .between:first-child {
+    padding-top: 0;
+}
+
+.messages .between:first-child:before {
+    display: none;
+}
+
+.message h4 {
+    margin-bottom: 0;
 }
