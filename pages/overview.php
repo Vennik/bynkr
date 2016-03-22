@@ -1,15 +1,3 @@
-<?php
-
-$pages = [
-    ['url' => 'loans', 'name' => 'Loans'],
-    ['url' => 'mortgages', 'name' => 'Mortgages'],
-    ['url' => 'leases', 'name' => 'Leases'],
-    ['url' => 'insurances', 'name' => 'Insurances'],
-    ['url' => 'credit-cards', 'name' => 'Credit Cards']
-];
-
-?>
-
 <ul class="main-menu">
     <li class="active">
         <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>

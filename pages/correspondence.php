@@ -1,15 +1,17 @@
 <ul class="main-menu">
     <li>
-        <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
+        <a href="overview" class="dropdown" onclick="return false;"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
-            <li><a href="loans">Loans</a></li>
-            <li><a href="mortgages">Mortgages</a></li>
-            <li><a href="leases">Leases</a></li>
-            <li><a href="insurances">Insurances</a></li>
-            <li><a href="credit-cards">Credit Cards</a></li>
+            <?php
+
+            foreach ($pages as $page) {
+                echo '<li' . (isset($components[1]) && $components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">'.$page['name'].'</a></li>';
+            }
+
+            ?>
         </ul>
     </li>
-    <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
+    <li class="active"><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
 </ul>
 
 <div class="menu-push">
@@ -68,7 +70,7 @@
             <!-- Col -->
             <div class="col-md-4">
 
-                <div>
+                <div class="messages-side">
 
                     <div class="page-header">
                         <h2>Conversation</h2>

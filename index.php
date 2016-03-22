@@ -5,6 +5,14 @@ session_start();
 $uri = $_SERVER['REQUEST_URI'];
 $components = explode('/', trim($uri, '/'));
 
+$pages = [
+    ['url' => 'loans', 'name' => 'Loans'],
+    ['url' => 'mortgages', 'name' => 'Mortgages'],
+    ['url' => 'leases', 'name' => 'Leases'],
+    ['url' => 'insurances', 'name' => 'Insurances'],
+    ['url' => 'credit-cards', 'name' => 'Credit Cards']
+];
+
 if (empty($components[0])) {
     $components[0] = 'index';
 }
