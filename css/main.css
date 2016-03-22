@@ -319,7 +319,7 @@ span.label {
     width: 100px;
 }
 
-.col-md-2, .col-md-10{
+.msg_container_base .col-md-2, .msg_container_base .col-md-10{
     padding:0;
 }
 
@@ -367,6 +367,7 @@ span.label {
 .messages > p {
     font-size: 13px;
     margin: 0 0 0.2rem 0;
+    padding-top: 10px;
 }
 .messages > time {
     font-size: 11px;
@@ -441,6 +442,6 @@ img {
     bottom:0;
 }
 
-.col-md-3 {
+.chat-window {
     width: 100%;
 }
