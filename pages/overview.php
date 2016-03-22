@@ -1,6 +1,6 @@
 <ul class="main-menu">
     <li class="active">
-        <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
+        <a href="#" class="dropdown" onclick="return false;"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
             <?php
 
