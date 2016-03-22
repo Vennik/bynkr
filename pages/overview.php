@@ -1,12 +1,27 @@
+<?php
+
+$pages = [
+    ['url' => 'loans', 'name' => 'Loans'],
+    ['url' => 'mortgages', 'name' => 'Mortgages'],
+    ['url' => 'leases', 'name' => 'Leases'],
+    ['url' => 'insurances', 'name' => 'Insurances'],
+    ['url' => 'credit-cards', 'name' => 'Credit Cards'],
+    ['url' => 'loans', 'name' => 'Loans']
+];
+
+?>
+
 <ul class="main-menu">
     <li>
         <a href="#" class="dropdown"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
-            <li><a href="loans">Loans</a></li>
-            <li><a href="mortgages">Mortgages</a></li>
-            <li><a href="leases">Leases</a></li>
-            <li><a href="insurances">Insurances</a></li>
-            <li><a href="credit-cards">Credit Cards</a></li>
+            <?php
+
+            foreach ($pages as $page) {
+                echo '<li><a href="' . $page['url'] . '">'.$page['name'].'</a></li>';
+            }
+
+            ?>
         </ul>
     </li>
     <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
