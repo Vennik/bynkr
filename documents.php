@@ -77,7 +77,7 @@
                     <p>28 January</p>
                 </a>
                 <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> Title of message</h4>
+                    <h4><span class="glyphicon glyphicon-comment"></span> An other message</h4>
                     <p>21 January</p>
                 </a>
 
@@ -85,7 +85,7 @@
                     2015
                 </div>
                 <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> Title of message</h4>
+                    <h4><span class="glyphicon glyphicon-comment"></span> Message</h4>
                     <p>21 November</p>
                 </a>
                 <a href="#" class="message">
