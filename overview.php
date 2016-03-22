@@ -21,7 +21,7 @@
 
 <?php require 'navigation.php' ?>
 
-<div class="container theme-showcase" role="main">
+<div class="container" role="main">
 
 </div>
 
