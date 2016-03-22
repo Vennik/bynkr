@@ -22,8 +22,14 @@
 
 <?php require 'navigation.php' ?>
 
-<div class="container" role="main">
+<div class="container theme-showcase" role="main">
+    <ul class="main-menu">
+        <li>Products</li>
+        <li>Correspondence</li>
+    </ul>
+</div>
 
+<div class="container" role="main">
 </div>
 
 <!-- Bootstrap core JavaScript

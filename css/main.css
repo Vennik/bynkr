@@ -124,3 +124,21 @@ form {
 .message h4 {
     margin-bottom: 0;
 }
+
+.main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 51px 0 0;
+    list-style: none;
+    border-right: 2px solid #ff6200;
+    margin: 0;
+}
+
+.main-menu li {
+    padding: 10px 20px;
+    font-size: 20px;
+
+}
