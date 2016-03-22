@@ -6,6 +6,10 @@ body {
     background: #f60;
 }
 
+.navbar-fixed-top {
+    border: 0;
+}
+
 .navbar-nav a {
     color: #fff !important;
 }
@@ -19,7 +23,6 @@ body {
 }
 
 .navbar-brand span {
-    color: #091c5a !important;
     font-size: 30px;
     float: left;
     margin: -7px 10px 0 0;
@@ -102,4 +105,42 @@ form {
 .submenu > li.active > a {
     background-color: #ff6200;
     color: #ffffff;
+}
+
+.documents {
+
+}
+
+.document {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 0 15px;
+    border-radius: 10px;
+    background: #e6e6e6;
+    text-align: center;
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.document p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.document .glyphicon {
+    font-size: 80px;
+    line-height: 120px;
+    position: relative;
+    margin-bottom: -10px;
+}
+
+.document .glyphicon-file {
+    left: 5px;
 }

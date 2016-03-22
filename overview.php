@@ -35,6 +35,10 @@
         </li>
         <li><a href="correspondence.php">Correspondence</a></li>
     </ul>
+    <div class="container" role="main">
+
+    </div>
+
 </div>
 
 <!-- Bootstrap core JavaScript
