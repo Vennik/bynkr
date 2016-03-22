@@ -215,6 +215,10 @@ form {
     left: 5px;
 }
 
+.document .glyphicon-euro {
+    left: -8px;
+}
+
 .message {
     text-align: center;
     text-decoration: none !important;
