@@ -68,7 +68,7 @@
             <!-- Col -->
             <div class="col-md-4">
 
-                <div class="messages">
+                <div>
 
                     <div class="page-header">
                         <h2>Conversation</h2>
