@@ -2,8 +2,27 @@ body {
     padding: 70px 0 0;
 }
 
+.navbar-default {
+    background: #f60;
+}
+
+.navbar-nav a {
+    color: #fff !important;
+}
+
+.navbar-nav .active a {
+    background: #e75c00 !important;
+}
+
 .navbar-brand {
-    padding: 10px 15px;
+    color: #fff !important;
+}
+
+.navbar-brand span {
+    color: #091c5a !important;
+    font-size: 30px;
+    float: left;
+    margin: -7px 10px 0 0;
 }
 
 form {
