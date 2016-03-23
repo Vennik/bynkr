@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><i class="fa fa-circle"></i> bynkr</a>
+            <a class="navbar-brand" href="/"><img src="/images/bynkr-white.png" alt="Logo" style="width: 20px;float: left;"> bynkr</a>
         </div>
         <div id="navbar" class="navbar-right">
             <ul class="nav navbar-nav">

@@ -36,7 +36,7 @@ if (isset($_POST['email'])) {
     <div class="col-md-6 col-xs-12">
 
         <div class="jumbotron">
-            <h1>bynkr</h1>
+            <h1><img src="/images/bynkr.png" alt="Logo" style="width: 60px; float: left;"> bynkr</h1>
             <p>The bridge between you, your bank and your financial security.</p>
             <p><a class="btn  btn-orange btn-lg" href="#" role="button">Learn more</a></p>
         </div>
