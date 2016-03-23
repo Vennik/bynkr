@@ -222,6 +222,31 @@ form {
     text-decoration: none !important;
 }
 
+.uploadbutton{
+    background: #fff;
+}
+
+.uploadbutton:hover{
+    background: #e6e6e6;
+}
+.uploadbutton:hover .glyphicon{
+    color: white;
+
+}
+@-webkit-keyframes thumb {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(0.9); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.buzz:hover{
+    -webkit-animation-name: thumb;
+    -webkit-animation-duration: 1000ms;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: 100;
+    -webkit-animation-timing-function: linear;
+}
+
 .document p {
     width: 100%;
     white-space: nowrap;
@@ -445,3 +470,45 @@ img {
 .chat-window {
     width: 100%;
 }
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+input[readonly] {
+    background-color: white !important;
+    cursor: text !important;
+}
+
