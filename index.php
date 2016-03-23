@@ -10,6 +10,7 @@ if (isset($_GET['logout'])) {
 }
 
 $pages = [
+    ['url' => 'all', 'name' => 'All Products'],
     ['url' => 'loans', 'name' => 'Loans'],
     ['url' => 'mortgages', 'name' => 'Mortgages'],
     ['url' => 'leases', 'name' => 'Leases'],

@@ -36,7 +36,13 @@
 
                 $icons = ['glyphicon-file', 'glyphicon-tag', 'glyphicon-briefcase', 'glyphicon-euro'];
                 $files = ['filename.xlsx', 'a-very-long-filename.docx', 'test.pdf'];
-                $amount = rand(5, 10);
+
+                if($components[1] == 'all') {
+                    $amount = rand(7, 12);
+                } else {
+                    $amount = rand(4, 7);
+                }
+
 
                 for ($i = 0; $i < $amount; $i++) {
                     echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
@@ -52,7 +58,11 @@
 
                 <?php
 
-                $amount = rand(2, 5);
+                if($components[1] == 'all') {
+                    $amount = rand(4, 5);
+                } else {
+                    $amount = rand(1, 3);
+                }
 
                 for ($i = 0; $i < $amount; $i++) {
                     echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
