@@ -512,3 +512,49 @@ input[readonly] {
     cursor: text !important;
 }
 
+
+.btn-orange {
+    color: #FFFFFF;
+    background-color: #FF6200;
+    border-color: #FF6200;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active,
+.btn-orange.active,
+.open .dropdown-toggle.btn-orange {
+    color: #FFFFFF;
+    background-color: #FF5100;
+    border-color: #FF6200;
+}
+
+.btn-orange:active,
+.btn-orange.active,
+.open .dropdown-toggle.btn-orange {
+    background-image: none;
+}
+
+.btn-orange.disabled,
+.btn-orange[disabled],
+fieldset[disabled] .btn-orange,
+.btn-orange.disabled:hover,
+.btn-orange[disabled]:hover,
+fieldset[disabled] .btn-orange:hover,
+.btn-orange.disabled:focus,
+.btn-orange[disabled]:focus,
+fieldset[disabled] .btn-orange:focus,
+.btn-orange.disabled:active,
+.btn-orange[disabled]:active,
+fieldset[disabled] .btn-orange:active,
+.btn-orange.disabled.active,
+.btn-orange[disabled].active,
+fieldset[disabled] .btn-orange.active {
+    background-color: #FF6200;
+    border-color: #FF6200;
+}
+
+.btn-orange .badge {
+    color: #FF6200;
+    background-color: #FFFFFF;
+}

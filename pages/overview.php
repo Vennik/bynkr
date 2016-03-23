@@ -60,6 +60,43 @@
 
                 ?>
 
+                <!--for file upload -->
+                <div class="documents" id="placeholder"></div>
+
+                <a href="#" class="document uploadbutton buzz" data-toggle="modal" data-target="#myModal"><span
+                        class="glyphicon glyphicon glyphicon-plus"></span><br>
+                    <p>Add file</p></a>
+
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Upload a file</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-orange btn-file">
+                                               <input type="file" multiple> Browse
+                                            </span>
+                                        </span>
+                                    <input type="text" class="form-control" id="selected-file" readonly>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn  btn-orange upload" data-dismiss="modal">Upload
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--End for file upload -->
+
             </div>
 
         </div>

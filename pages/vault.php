@@ -49,6 +49,7 @@
                     }
 
                     ?>
+
                     <!--for file upload -->
                     <div class="documents" id="placeholder"></div>
 
@@ -56,11 +57,6 @@
                             class="glyphicon glyphicon glyphicon-plus"></span><br>
                         <p>Add file</p></a>
 
-                    <!--End for file upload -->
-                    <div class="clear"></div>
-
-
-                    <!-- Modal -->
                     <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
 
@@ -73,7 +69,7 @@
                                 <div class="modal-body">
                                     <div class="input-group">
                                         <span class="input-group-btn">
-                                            <span class="btn btn-primary btn-file">
+                                            <span class="btn btn-orange btn-file">
                                                <input type="file" multiple> Browse
                                             </span>
                                         </span>
@@ -81,13 +77,19 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-success upload" data-dismiss="modal">Upload
+                                    <button type="button" class="btn  btn-orange upload" data-dismiss="modal">Upload
                                     </button>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+
+                    <!--End for file upload -->
+                    <div class="clear"></div>
+
+
+
 
 
                 </div>
