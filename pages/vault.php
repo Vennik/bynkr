@@ -38,18 +38,10 @@
                         <p>wallet.dat</p></a>
                     <a href="#" class="document"><span class="glyphicon glyphicon glyphicon-lock"></span><br>
                         <p>id_rsa</p></a>
-
-                    <?php
-
-                    $icons = ['glyphicon-file', 'glyphicon-tag', 'glyphicon-briefcase', 'glyphicon-euro'];
-                    $files = ['filename.xlsx', 'a-very-long-filename.docx', 'test.pdf'];
-                    $amount = rand(1, 2);
-
-                    for ($i = 0; $i < $amount; $i++) {
-                        echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
-                    }
-
-                    ?>
+                    <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
+                        <p>birth_cert.pdf</p></a>
+                    <a href="#" class="document"><span class="glyphicon glyphicon-file"></span><br>
+                        <p>degree.pdf</p></a>
 
                     <!--for file upload -->
                     <div class="documents" id="placeholder"></div>
