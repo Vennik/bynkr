@@ -5,10 +5,10 @@
         </div>
         <div id="navbar" class="navbar-right">
             <ul class="nav navbar-nav">
-                <?php if (isset($_SESSION['email'])): ?>
+                <?php if (isset($_SESSION['email']) && !empty($_SESSION['email'])): ?>
                     <li class="navbar-text">Logged in as <?= $_SESSION['email'] ?></li>
+                    <li><a href="/?logout=1"><span class="fa fa-sign-out"></a></li>
                 <?php endif ?>
-                <li><a href="/"><span class="fa fa-sign-out"></a></li>
             </ul>
         </div>
     </div>
