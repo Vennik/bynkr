@@ -560,8 +560,9 @@ fieldset[disabled] .btn-orange.active {
 }
 
 .refrecconv {
+    display: inline-block;
     color: #000;
-
+    cursor: pointer;
 }
 
 th {
