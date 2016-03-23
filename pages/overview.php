@@ -13,7 +13,8 @@
     </li>
     <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
     <li><a href="vault"><span class="glyphicon glyphicon-lock"></span>Personal Vault</a></li>
-    <li><a href="edit
+    <li><a href="vault"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+</ul>
 
 <div class="container-fluid menu-push" role="main">
     <!-- Row -->
