@@ -76,7 +76,6 @@
                     <div class="page-header">
                         <h2>Conversation</h2>
                     </div>
-                    <div class="col-xs-12 col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body msg_container_base">
                                 <?php
@@ -127,7 +126,6 @@
                                 <!--endrepeat -->
 
 
-                            </div>
                         </div>
                     </div>
 
