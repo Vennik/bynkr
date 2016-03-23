@@ -142,6 +142,8 @@
                             $count = 0;
                             $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
                             $text = array_filter(explode("\n", wordwrap($text, 80)));
+                            $customerimg = ['customer1','customer2','customer3'];
+                            $currentcustomer = $customerimg[array_rand($customerimg)];
                             foreach ($text as $t):
                                 $rand = rand(0, 1);
                                 if ($last === $rand) {
@@ -175,7 +177,7 @@
                                     </div>
                                     <?php if ($rand): ?>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="/images/customer.png" class="img-responsive">
+                                            <img src="/images/<?php echo $currentcustomer ?>.png" class="img-responsive">
                                         </div>
                                     <?php endif ?>
                                 </div>
