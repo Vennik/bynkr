@@ -1,6 +1,6 @@
 <ul class="main-menu">
     <?php foreach ($pages as $page): ?>
-        <li class="<?= $page['url'] == $components[0] ? 'active' : '' ?><?= $page['spacer'] ? ' spacer' : '' ?>">
+        <li class="<?= $page['url'] == $components[0] ? 'active' : '' ?><?= isset($page['space']) && $page['spacer'] ? ' spacer' : '' ?>">
             <a href="<?= $page['url'] ?>"<?= isset($page['items']) ? ' class="dropdown" onclick="return false;"' : '' ?>>
                 <?= $page['name'] ?>
             </a>
