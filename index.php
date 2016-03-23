@@ -9,17 +9,11 @@ if (isset($_GET['logout'])) {
     $_SESSION['email'] = null;
 }
 
-$pages = [
-    ['url' => 'all', 'name' => 'All Products'],
-    ['url' => 'loans', 'name' => 'Loans'],
-    ['url' => 'mortgages', 'name' => 'Mortgages'],
-    ['url' => 'leases', 'name' => 'Leases'],
-    ['url' => 'insurances', 'name' => 'Insurances'],
-    ['url' => 'credit-cards', 'name' => 'Credit Cards']
-];
-
 if (empty($components[0])) {
     $components[0] = 'index';
+}
+if (empty($components[1])) {
+    $components[1] = 'all';
 }
 $page = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR . $components[0] . '.php';
 if (!file_exists($page)) {

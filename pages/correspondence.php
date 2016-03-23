@@ -1,21 +1,4 @@
-<ul class="main-menu">
-    <li class="active">
-        <a href="overview" class="dropdown" onclick="return false;"><span
-                class="glyphicon glyphicon-chevron-down"></span>Products</a>
-        <ul class="submenu">
-            <?php
-
-            foreach ($pages as $page) {
-                echo '<li' . (isset($components[1]) && $components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">' . $page['name'] . '</a></li>';
-            }
-
-            ?>
-        </ul>
-    </li>
-    <li class="active"><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
-    <li><a href="vault"><span class="glyphicon glyphicon-lock"></span>Personal Vault</a></li>
-    <li><a href="edit"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
-</ul>
+<?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'menu.php' ?>
 
 <div class="menu-push">
     <div class="container-fluid" role="main">
