@@ -29,7 +29,18 @@
             <div class="documents">
 
                 <div class="page-header">
-                    <h2>ING documents</h2>
+                    <?php
+                    if($components[1] == 'all') {
+                        echo '<h2>ING Documents</h2>';
+                    } else {
+                        foreach($pages as $page) {
+                            if($components[1] == $page['url']) {
+                                echo '<h2>' . $page['name'] . '</h2>';
+                            }
+                        }
+                    }
+
+                    ?>
                 </div>
 
                 <?php
