@@ -33,6 +33,7 @@
                         <div class=" col-md-9 col-lg-9 ">
                             <table class="table table-user-information">
                                 <tbody>
+                                <tr>
                                 <td>Date of Birth</td>
                                 <td>01/24/1988</td>
                                 </tr>
@@ -54,8 +55,9 @@
                                     <td>Email</td>
                                     <td><a href="#">GinaBeuk@outlook.com</a></td>
                                 </tr>
+                                <tr>
                                 <td>Phone Number</td>
-                                <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                                <td>123-4567-890 (landline)<br><br>555-4567-890 (mobile)
                                 </td>
 
                                 </tr>
