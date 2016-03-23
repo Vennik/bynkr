@@ -6,6 +6,10 @@ body {
     clear: both;
 }
 
+.badge {
+    margin-left: 8px;
+}
+
 .navbar-header {
     float: left;
 }
