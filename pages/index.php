@@ -2,7 +2,7 @@
 
 if (isset($_POST['email'])) {
     $_SESSION['email'] = $_POST['email'];
-    header('Location: /overview');
+    header('Location: /overview/all');
 }
 
 ?>
