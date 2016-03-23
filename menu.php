@@ -1,20 +1,3 @@
-<?php
-
-$pages = [
-    ['url' => 'overview', 'name' => '<i class="fa fa-chevron-down fa-fw"></i> Products', 'items' => [
-        ['url' => 'all', 'name' => 'All Products'],
-        ['url' => 'loans', 'name' => 'Loans'],
-        ['url' => 'mortgages', 'name' => 'Mortgages'],
-        ['url' => 'leases', 'name' => 'Leases'],
-        ['url' => 'insurances', 'name' => 'Insurances'],
-        ['url' => 'credit-cards', 'name' => 'Credit Cards']
-    ]],
-    ['url' => 'correspondence', 'name' => '<i class="fa fa-comment fa-fw"></i> Correspondence'],
-    ['url' => 'vault', 'name' => '<i class="fa fa-lock fa-fw"></i> Personal Vault'],
-    ['url' => 'edit', 'name' => '<i class="fa fa-cog fa-fw"></i> User Settings', 'spacer' => true],
-];
-
-?>
 <ul class="main-menu">
     <?php foreach ($pages as $page): ?>
         <li class="<?= $page['url'] == $components[0] ? 'active' : '' ?><?= $page['spacer'] ? ' spacer' : '' ?>">
