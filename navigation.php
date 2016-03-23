@@ -8,7 +8,7 @@
                 <?php if (isset($_SESSION['email'])): ?>
                     <li class="navbar-text">Logged in as <?= $_SESSION['email'] ?></li>
                 <?php endif ?>
-                <li><a href="#"><span class="glyphicon glyphicon-cog"></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></a></li>
             </ul>
         </div>
     </div>
