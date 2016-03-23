@@ -8,7 +8,7 @@
                 <?php if (isset($_SESSION['email'])): ?>
                     <li class="navbar-text">Logged in as <?= $_SESSION['email'] ?></li>
                 <?php endif ?>
-                <li><a href="/"><span class="fa fa-log-out"></a></li>
+                <li><a href="/"><span class="fa fa-sign-out"></a></li>
             </ul>
         </div>
     </div>
