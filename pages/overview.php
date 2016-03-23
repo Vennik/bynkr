@@ -35,7 +35,7 @@
                 <?php
 
                 $icons = ['glyphicon-file', 'glyphicon-tag', 'glyphicon-briefcase', 'glyphicon-euro'];
-                $files = ['filename.png', 'a-very-long-filename.png', 'test.jpg'];
+                $files = ['filename.xlsx', 'a-very-long-filename.docx', 'test.pdf'];
                 $amount = rand(5, 10);
 
                 for ($i = 0; $i < $amount; $i++) {
