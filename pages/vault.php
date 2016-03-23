@@ -1,6 +1,6 @@
 <ul class="main-menu">
-    <li class="active">
-        <a href="#" class="dropdown" onclick="return false;"><span class="fa fa-shopping-cart"></span>Products</a>
+    <li>
+        <a href="overview" class="dropdown" onclick="return false;"><span class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
             <?php
 
@@ -12,7 +12,7 @@
         </ul>
     </li>
     <li><a href="correspondence"><span class="glyphicon glyphicon-comment"></span>Correspondence</a></li>
-    <li><a href="vault"><span class="glyphicon glyphicon-lock"></span>Personal Vault</a></li>
+    <li class="active"><a href="vault"><span class="glyphicon glyphicon-lock"></span>Personal Vault</a></li>
 </ul>
 
 <div class="container-fluid menu-push" role="main">
@@ -29,14 +29,17 @@
             <div class="documents">
 
                 <div class="page-header">
-                    <h2>ING documents</h2>
+                    <h2>Personal vault</h2>
                 </div>
+
+                <a href="#" class="document"><span class="glyphicon glyphicon-bitcoin"></span><br><p>wallet.dat</p></a>
+                <a href="#" class="document"><span class="glyphicon glyphicon glyphicon-lock"></span><br><p>id_rsa</p></a>
 
                 <?php
 
                 $icons = ['glyphicon-file', 'glyphicon-tag', 'glyphicon-briefcase', 'glyphicon-euro'];
                 $files = ['filename.png', 'a-very-long-filename.png', 'test.jpg'];
-                $amount = rand(5, 10);
+                $amount = rand(1, 2);
 
                 for ($i = 0; $i < $amount; $i++) {
                     echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
@@ -46,44 +49,7 @@
 
                 <div class="clear"></div>
 
-                <!-- Row -->
-                <div class="row">
 
-                    <!-- Col -->
-                    <div class="col-md-7">
-
-                        <div class="page-header">
-                            <h2>Personal documents</h2>
-                        </div>
-
-                        <?php
-
-                        $amount = rand(2, 5);
-
-                        for ($i = 0; $i < $amount; $i++) {
-                            echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
-                        }
-
-                        ?>
-
-                    </div>
-                    <!-- End Col -->
-
-                    <!-- Col -->
-                    <div class="col-md-5">
-
-                        <div class="page-header">
-                            <h2>Personal safe</h2>
-                        </div>
-
-                        <a href="#" class="document"><span class="glyphicon glyphicon-bitcoin"></span><br><p>wallet.dat</p></a>
-                        <a href="#" class="document"><span class="glyphicon glyphicon glyphicon-lock"></span><br><p>id_rsa</p></a>
-
-                    </div>
-                    <!-- End Col -->
-
-                </div>
-                <!-- End Row -->
 
             </div>
 
