@@ -3,7 +3,11 @@
 session_start();
 
 $uri = $_SERVER['REQUEST_URI'];
-$components = explode('/', trim($uri, '/'));
+$components = explode('?', $uri);
+$components = explode('/', trim($components[0], '/'));
+if (isset($_GET['logout'])) {
+    $_SESSION['email'] = null;
+}
 
 $pages = [
     ['url' => 'loans', 'name' => 'Loans'],
