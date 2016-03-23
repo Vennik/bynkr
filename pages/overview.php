@@ -64,7 +64,16 @@
                 <div class="clear"></div>
 
                 <div class="page-header">
-                    <h2>Personal documents</h2>
+                    <?php
+                    if($components[1] == 'all') {
+                        echo '<h2>Personal ING Documents</h2>';
+                    } else {
+                        foreach($pages as $page) {
+                            if($components[1] == $page['url']) {
+                                echo '<h2> Personal ' . $page['name'] . '</h2>';
+                            }
+                        }
+                    } ?>
                 </div>
 
                 <?php
