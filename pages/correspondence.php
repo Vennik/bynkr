@@ -26,7 +26,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="even refrecconv">
+                            <tr class="even refrecconv<?php echo $components[1] == 'all' ? ' active' : '' ?>">
                                 <td>23-3-2016</td>
                                 <td>18:00</td>
                                 <td><span class="label label-success">Whatsapp</span></td>
@@ -53,7 +53,7 @@
                                     <span class="badge">1</span>
                                 </td>
                             </tr>
-                            <tr class="odd refrecconv">
+                            <tr class="odd refrecconv<?php echo ($components[1] != 'all') ? ' active' : '' ?>">
                                 <td>20-3-2016</td>
                                 <td>12:13</td>
                                 <td><span class="label label-warning">ING app</span></td>

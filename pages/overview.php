@@ -159,7 +159,7 @@
                         $amount = rand(1, 2);
                     }
                     for ($i = 0; $i < $amount; $i++) {
-                        echo '<a href="#" class="message">
+                        echo '<a href="correspondence/' . rand(1, 100000) . '" class="message">
                     <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
                 <p>' . rand(1, 30) . ' January</p>
                 </a>';
@@ -181,7 +181,7 @@
                     foreach (array_reverse($in) as $m) {
 
 
-                        echo '<a href="#" class="message">
+                        echo '<a href="correspondence/' . rand(1, 100000) . '" class="message">
                     <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
                 <p>' . rand(1, 30) . ' ' . $months[$m] . '</p>
                 </a>';
@@ -203,7 +203,7 @@
                     if (sizeof($in) == 1) $in = [$in];
                     foreach (array_reverse($in) as $m) {
 
-                        echo '<a href="#" class="message">
+                        echo '<a href="correspondence/' . rand(1, 100000) . '" class="message">
                     <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
                 <p>' . rand(1, 30) . ' ' . $months[$m] . '</p>
                 </a>';

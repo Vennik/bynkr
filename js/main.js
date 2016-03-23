@@ -4,6 +4,19 @@ $(function () {
     $('.refrecconv').click(refreshDiv);
     $('.document:not(.buzz)').click(openpdf);
 
+    $(".nicer-table").each(function() {
+
+        var trs = $("tr", this);
+
+        trs.click(function() {
+
+            trs.removeClass("active");
+            $(this).addClass("active");
+
+        });
+
+    });
+
     function refreshDiv() {
         $('#convo').load(document.URL +  ' #convo');
         return false;

@@ -316,6 +316,10 @@ tr:hover {
     background-color: #fdb;
 }
 
+tr.active td {
+    background-color: #ffc174 !important;
+}
+
 span.label {
     display: block;
     padding: 5px 0px;
