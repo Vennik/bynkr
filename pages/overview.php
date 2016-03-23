@@ -98,37 +98,74 @@
                     <h2>Correspondence</h2>
                 </div>
 
+                <?php
+
+                $messageTitles = [
+                    'Hello from ING',
+                    'Your new CC is here!',
+                    'Your ticket [#103]',
+                    'Try it out!',
+                    'Happy new year!',
+                    'Your year overview',
+                    'Question answered',
+                    'Also hello!'
+                ];
+
+                $months = array('January', 'February', 'March', 'April', 'May', 'June', 'Juli', 'August', 'September', 'October', 'November', 'December');
+
+                ?>
+
                 <div class="between">
                     January 2016
                 </div>
-                <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> Title of message</h4>
-                    <p>28 January</p>
-                </a>
-                <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> An other message</h4>
-                    <p>21 January</p>
-                </a>
+                <?php
+
+                $amount = rand(1, 2);
+                for ($i = 0; $i < $amount; $i++) {
+                    echo '<a href="#" class="message">
+                    <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
+                <p>' . rand(1, 30) . ' January</p>
+                </a>';
+                }
+
+                ?>
 
                 <div class="between">
                     2015
                 </div>
-                <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> Message</h4>
-                    <p>21 November</p>
-                </a>
-                <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> Title of message</h4>
-                    <p>16 August</p>
-                </a>
+                <?php
+
+                $in = array_rand($months, rand(1, 3));
+                if (sizeof($in) == 1) $in = [$in];
+                foreach(array_reverse($in) as $m) {
+
+
+                echo '<a href="#" class="message">
+                    <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
+                <p>' . rand(1, 30) . ' ' . $months[$m] . '</p>
+                </a>';
+
+                }
+
+                ?>
 
                 <div class="between">
                     2014
                 </div>
-                <a href="#" class="message">
-                    <h4><span class="glyphicon glyphicon-comment"></span> Title of message</h4>
-                    <p>8 June</p>
-                </a>
+                <?php
+
+                $in = array_rand($months, rand(1, 3));
+                if (sizeof($in) == 1) $in = [$in];
+                foreach(array_reverse($in) as $m) {
+
+                    echo '<a href="#" class="message">
+                    <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
+                <p>' . rand(1, 30) . ' ' . $months[$m] . '</p>
+                </a>';
+
+                }
+
+                ?>
 
             </div>
 
