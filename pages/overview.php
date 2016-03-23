@@ -30,7 +30,18 @@
             <div class="documents">
 
                 <div class="page-header">
-                    <h2>ING documents</h2>
+                    <?php
+                    if($components[1] == 'all') {
+                        echo '<h2>ING Documents</h2>';
+                    } else {
+                        foreach($pages as $page) {
+                            if($components[1] == $page['url']) {
+                                echo '<h2>' . $page['name'] . '</h2>';
+                            }
+                        }
+                    }
+
+                    ?>
                 </div>
 
                 <?php
@@ -54,7 +65,16 @@
                 <div class="clear"></div>
 
                 <div class="page-header">
-                    <h2>Personal documents</h2>
+                    <?php
+                    if($components[1] == 'all') {
+                        echo '<h2>Personal ING Documents</h2>';
+                    } else {
+                        foreach($pages as $page) {
+                            if($components[1] == $page['url']) {
+                                echo '<h2> Personal ' . $page['name'] . '</h2>';
+                            }
+                        }
+                    } ?>
                 </div>
 
                 <?php
@@ -144,7 +164,11 @@
                 </div>
                 <?php
 
-                $amount = rand(1, 2);
+                if($components[1] == 'all') {
+                    $amount = rand(2, 5);
+                } else {
+                    $amount = rand(1, 2);
+                }
                 for ($i = 0; $i < $amount; $i++) {
                     echo '<a href="#" class="message">
                     <h4><span class="glyphicon glyphicon-comment"></span> ' . $messageTitles[array_rand($messageTitles)] . '</h4>
@@ -159,7 +183,11 @@
                 </div>
                 <?php
 
-                $in = array_rand($months, rand(1, 3));
+                if($components[1] == 'all') {
+                    $in = array_rand($months, rand(2, 4));
+                } else {
+                    $in = array_rand($months, rand(1, 2));
+                }
                 if (sizeof($in) == 1) $in = [$in];
                 foreach(array_reverse($in) as $m) {
 
@@ -178,7 +206,11 @@
                 </div>
                 <?php
 
-                $in = array_rand($months, rand(1, 3));
+                if($components[1] == 'all') {
+                    $in = array_rand($months, rand(2, 4));
+                } else {
+                    $in = array_rand($months, rand(1, 2));
+                }
                 if (sizeof($in) == 1) $in = [$in];
                 foreach(array_reverse($in) as $m) {
 
