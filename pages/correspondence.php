@@ -134,8 +134,8 @@
                     <div class="page-header">
                         <h2>Conversation</h2>
                     </div>
-                    <div class="panel panel-default" >
-                        <div class="panel-body msg_container_base" id="convo">
+                    <div class="panel panel-default" id="convo">
+                        <div class="panel-body msg_container_base" >
                             <?php
                             $minutes = 9;
                             $last = null;
