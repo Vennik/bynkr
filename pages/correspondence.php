@@ -82,23 +82,19 @@
                         function getCor()
                         {
                             $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
-                            $day = rand(1, 29);
-                            $month = rand(1, 9);
-                            $hour = rand(1, 24);
-                            $minutes = rand(1, 59);
-                            $messages = rand(2, 6);
-                            $date = $day . "-" . $month . "-2015";
-                            $time = $hour . ":" . $minutes;
 
                             $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
                             $text = array_filter(explode("\n", wordwrap($text, 80)));
                             $last = null;
                             $count = 1;
                             $even = true;
+                            $unix = strtotime('-2 weeks');
                             foreach ($text as $t) {
-                                $tuple = $platforms[array_rand($platforms)];
-                                $platform = $tuple[0];
-                                $color = $tuple[1];
+                                $unix -= rand(60, 7 * 24 * 60 * 60);
+                                $date = date('j-n-Y', $unix);
+                                $time = date('H:i', $unix);
+                                $messages = rand(2, 6);
+                                list($platform, $color) = $platforms[array_rand($platforms)];
                                 $rand = rand(1, 2);
                                 if ($last === $rand) {
                                     if ($count < 1) {
@@ -111,7 +107,6 @@
                                     $count = 0;
                                 }
                                 $last = $rand;
-                                $minutes += rand(1, 5);
 
                                 echo '<tr class=' . ($even ? 'even' : 'odd') . '>
                                     <td>' . $date . '</td>
