@@ -1,11 +1,12 @@
 <ul class="main-menu">
     <li>
-        <a href="overview" class="dropdown" onclick="return false;"><span class="fa fa-shopping-cart"></span>Products</a>
+        <a href="overview" class="dropdown" onclick="return false;"><span
+                class="fa fa-shopping-cart"></span>Products</a>
         <ul class="submenu">
             <?php
 
             foreach ($pages as $page) {
-                echo '<li' . (isset($components[1]) && $components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">'.$page['name'].'</a></li>';
+                echo '<li' . (isset($components[1]) && $components[1] == $page['url'] ? ' class="active"' : '') . '><a href="overview/' . $page['url'] . '">' . $page['name'] . '</a></li>';
             }
 
             ?>
@@ -75,299 +76,55 @@
                     <div class="page-header">
                         <h2>Conversation</h2>
                     </div>
-                        <div class="col-xs-12 col-md-12">
-                            <div class="panel panel-default">
-                                <div class="panel-body msg_container_base">
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body msg_container_base">
+                                <?php
+                                $minutes = 9;
+                                $last = null;
+                                $count = 0;
+                                for ($i = 0; $i < 10; $i++):
+                                    $rand = rand(0, 1);
+                                    if ($last === $rand) {
+                                        if ($count < 1) {
+                                            $count += 1;
+                                        } else {
+                                            $count = 0;
+                                            $rand = 1 - $rand;
+                                        }
+                                    } else {
+                                        $count = 0;
+                                    }
+                                    $last = $rand;
+                                    $minutes += rand(0, 5);
+                                    if ($rand): ?>
+                                        <div class="row msg_container base_sent">
+                                            <div class="col-md-10 col-xs-10">
+                                                <div class="messages msg_sent">
+                                                    <p><?= file_get_contents('http://loripsum.net/api/1/short'); ?></p>
+                                                    <time datetime="2009-11-13T20:00">Randy • <?= $minutes ?> min</time>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-xs-2 avatar">
+                                                <img src="images/customer.png" class="img-responsive">
                                             </div>
                                         </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                                    <?php else: ?>
+                                        <div class="row msg_container base_receive">
+                                            <div class="col-md-2 col-xs-2 avatar">
+                                                <img src="images/logo.png" class="img-responsive">
+                                            </div>
+                                            <div class="col-md-10 col-xs-10">
+                                                <div class="messages msg_receive">
+                                                    <p><?= file_get_contents('http://loripsum.net/api/1/short'); ?></p>
+                                                    <time datetime="2009-11-13T20:00">Timothy • <?= $minutes ?> min</time>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <?php endif;
+                                endfor ?>
 
-                                    <!-- startrepeat -->
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_sent">
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_sent">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img
-                                                src="images/customer.png"
-                                                class=" img-responsive ">
-                                        </div>
-                                    </div>
-                                    <div class="row msg_container base_receive">
-                                        <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="images/logo.png" class=" img-responsive ">
-                                        </div>
-                                        <div class="col-md-10 col-xs-10">
-                                            <div class="messages msg_receive">
-                                                <p>that mongodb thing looks good, huh?
-                                                    tiny master db, and huge document store</p>
-                                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--endrepeat -->
+                                <!--endrepeat -->
 
 
                             </div>
