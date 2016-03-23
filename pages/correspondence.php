@@ -177,7 +177,13 @@
                                             class="messages msg_<?php if ($rand): ?>sent<?php else: ?>receive<?php endif ?>">
                                             <p><?= $t ?></p>
                                             <time datetime="2009-11-13T20:00">
-                                                <?php if ($rand): ?>Randy<?php else: ?>Timothy<?php endif ?>
+                                                <?php if ($rand): ?>
+                                                    <?= isset($_SESSION['email']) && !empty($_SESSION['email'])
+                                                        ? $_SESSION['email']
+                                                        : 'Randy' ?>
+                                                <?php else: ?>
+                                                    Timothy
+                                                <?php endif ?>
                                                 • <?= $minutes ?> min
                                             </time>
                                         </div>
