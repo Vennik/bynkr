@@ -46,7 +46,7 @@
                                 <td>23-3-2016</td>
                                 <td>18:00</td>
                                 <td><span class="label label-success">Whatsapp</span></td>
-                                <td>Refinancing house  <span class="badge">4</span></td>
+                                <td>Refinancing house <span class="badge">4</span></td>
                             </tr>
                             <tr class="odd">
                                 <td>22-3-2016</td>
@@ -68,28 +68,26 @@
                             </tr>
 
                             <?php
-
-                            $platforms = [['Facebook','primary'],['Whatsapp','success'],['ING app','warning'], ['Call','default']];
-                            $amount = rand(5, 10);
-
-                            for ($i = 0; $i < $amount; $i++) {
+                            function getCor($odd)
+                            {
+                                $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
                                 $tuple = $platforms[array_rand($platforms)];
                                 $platform = $tuple[0];
                                 $color = $tuple[1];
-                                $day = rand(1,29);
-                                $month = rand(1,9);
-                                $hour =  rand(1,24);
-                                $minutes =  rand(1,59);
-                                $messages = rand(2,8);
-                                $date = $day."-".$month."-2015";
-                                $time = $hour.":".$minutes;
+                                $day = rand(1, 29);
+                                $month = rand(1, 9);
+                                $hour = rand(1, 24);
+                                $minutes = rand(1, 59);
+                                $messages = rand(2, 6);
+                                $date = $day . "-" . $month . "-2015";
+                                $time = $hour . ":" . $minutes;
 
                                 $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
                                 $text = array_filter(explode("\n", wordwrap($text, 80)));
                                 $last = null;
-                                $count = 0;
+                                $count = 1;
                                 foreach ($text as $t) {
-                                    $rand = rand(0, 1);
+                                    $rand = rand(1, 2);
                                     if ($last === $rand) {
                                         if ($count < 1) {
                                             $count += 1;
@@ -101,24 +99,27 @@
                                         $count = 0;
                                     }
                                     $last = $rand;
-                                    $minutes += rand(0, 5);
+                                    $minutes += rand(1, 5);
                                 }
 
-
-
-
-                                echo '<tr class="odd">
-                                <td>'.$date.'</td>
-                                <td>'.$time.'</td>
-                                <td><span class="label label-'.$color.'">'.$platform.'</span></td>
-                                <td>'.$t.' <span class="badge">'.$messages.'</span></td>
+                                echo '<tr class=' . $odd . '>
+                                <td>' . $date . '</td>
+                                <td>' . $time . '</td>
+                                <td><span class="label label-' . $color . '">' . $platform . '</span></td>
+                                <td>' . $t . ' <span class="badge">' . $messages . '</span></td>
                             </tr>';
                             }
 
+                            $amount = rand(3, 8);
+                            for ($i = 0; $i < $amount; $i++) {
+                                getCor("even");
+                                getCor("odd");
+                            }
                             ?>
                             </tbody>
                         </table>
                     </table>
+
 
                 </div>
 
@@ -163,7 +164,8 @@
                                         </div>
                                     <?php endif ?>
                                     <div class="col-md-10 col-xs-10">
-                                        <div class="messages msg_<?php if ($rand): ?>sent<?php else: ?>receive<?php endif ?>">
+                                        <div
+                                            class="messages msg_<?php if ($rand): ?>sent<?php else: ?>receive<?php endif ?>">
                                             <p><?= $t ?></p>
                                             <time datetime="2009-11-13T20:00">
                                                 <?php if ($rand): ?>Randy<?php else: ?>Timothy<?php endif ?>
