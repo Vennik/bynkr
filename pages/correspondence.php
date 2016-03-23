@@ -32,102 +32,103 @@
                     </div>
 
                     <!-- Table -->
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th class="col-md-1">Date</th>
-                            <th class="col-md-1">Time</th>
-                            <th class="col-md-1">Platform</th>
-                            <th class="col-md-10">Title</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="even">
-                            <td>23-3-2016</td>
-                            <td>18:00</td>
-                            <td><span class="label label-success">Whatsapp</span></td>
-                            <td>
-                                <a class="refrecconv">Refinancing my house</a>
-                                <span class="badge">4</span>
-                            </td>
-                        </tr>
-                        <tr class="odd">
-                            <td>22-3-2016</td>
-                            <td>19:00</td>
-                            <td><span class="label label-primary">Facebook</span></td>
-                            <td>
-                                <a class="refrecconv">What to do if I lose my phone while abroad?</a>
-                                <span class="badge">12</span>
-                            </td>
-                        </tr>
-                        <tr class="even">
-                            <td>22-3-2016</td>
-                            <td>20:00</td>
-                            <td><span class="label label-default">Call</span></td>
-                            <td>
-                                <a class="refrecconv">Question: How do I change my PIN?</a>
-                                <span class="badge">1</span>
-                            </td>
-                        </tr>
-                        <tr class="odd">
-                            <td>20-3-2016</td>
-                            <td>12:13</td>
-                            <td><span class="label label-warning">ING app</span></td>
-                            <td>
-                                <a class="refrecconv">Feedback: I love the app</a>
-                                <span class="badge">3</span>
-                            </td>
-                        </tr>
+                    <div class="nicer-table-container">
+                        <table class="table nicer-table">
+                            <thead>
+                            <tr>
+                                <th class="col-md-1">Date</th>
+                                <th class="col-md-1">Time</th>
+                                <th class="col-md-1">Platform</th>
+                                <th class="col-md-10">Title</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="even refrecconv">
+                                <td>23-3-2016</td>
+                                <td>18:00</td>
+                                <td><span class="label label-success">Whatsapp</span></td>
+                                <td>
+                                    Refinancing my house
+                                    <span class="badge">4</span>
+                                </td>
+                            </tr>
+                            <tr class="odd refrecconv">
+                                <td>22-3-2016</td>
+                                <td>19:00</td>
+                                <td><span class="label label-primary">Facebook</span></td>
+                                <td>
+                                    What to do if I lose my phone while abroad?
+                                    <span class="badge">12</span>
+                                </td>
+                            </tr>
+                            <tr class="even refrecconv">
+                                <td>22-3-2016</td>
+                                <td>20:00</td>
+                                <td><span class="label label-default">Call</span></td>
+                                <td>
+                                    Question: How do I change my PIN?
+                                    <span class="badge">1</span>
+                                </td>
+                            </tr>
+                            <tr class="odd refrecconv">
+                                <td>20-3-2016</td>
+                                <td>12:13</td>
+                                <td><span class="label label-warning">ING app</span></td>
+                                <td>
+                                    Feedback: I love the app
+                                    <span class="badge">3</span>
+                                </td>
+                            </tr>
 
-                        <?php
-                        function getCor()
-                        {
-                            $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
+                            <?php
+                            function getCor()
+                            {
+                                $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
 
-                            $text = file_get_contents('http://loripsum.net/api/1/medium/plaintext');
-                            $text = array_filter(explode("\n", wordwrap($text, 80)));
-                            $last = null;
-                            $count = 1;
-                            $even = true;
-                            $unix = strtotime('-2 weeks');
-                            foreach ($text as $t) {
-                                $unix -= rand(60, 7 * 24 * 60 * 60);
-                                $date = date('j-n-Y', $unix);
-                                $time = date('H:i', $unix);
-                                $messages = rand(2, 6);
-                                list($platform, $color) = $platforms[array_rand($platforms)];
-                                $rand = rand(1, 2);
-                                if ($last === $rand) {
-                                    if ($count < 1) {
-                                        $count += 1;
+                                $text = file_get_contents('http://loripsum.net/api/1/medium/plaintext');
+                                $text = array_filter(explode("\n", wordwrap($text, 80)));
+                                $last = null;
+                                $count = 1;
+                                $even = true;
+                                $unix = strtotime('-2 weeks');
+                                foreach ($text as $t) {
+                                    $unix -= rand(60, 7 * 24 * 60 * 60);
+                                    $date = date('j-n-Y', $unix);
+                                    $time = date('H:i', $unix);
+                                    $messages = rand(2, 6);
+                                    list($platform, $color) = $platforms[array_rand($platforms)];
+                                    $rand = rand(1, 2);
+                                    if ($last === $rand) {
+                                        if ($count < 1) {
+                                            $count += 1;
+                                        } else {
+                                            $count = 0;
+                                            $rand = 1 - $rand;
+                                        }
                                     } else {
                                         $count = 0;
-                                        $rand = 1 - $rand;
                                     }
-                                } else {
-                                    $count = 0;
-                                }
-                                $last = $rand;
+                                    $last = $rand;
 
-                                echo '<tr class=' . ($even ? 'even' : 'odd') . '>
+                                    echo '<tr class="' . ($even ? 'even' : 'odd') . ' refrecconv">
                                     <td>' . $date . '</td>
                                     <td>' . $time . '</td>
                                     <td><span class="label label-' . $color . '">' . $platform . '</span></td>
                                     <td>
-                                        <a class="refrecconv">' . $t . '</a>
+                                        ' . $t . '
                                         <span class="badge">' . $messages . '</span>
                                     </td>
                                 </tr>';
-                                $even = !$even;
+                                    $even = !$even;
+                                }
+
                             }
 
-                        }
-
-                        getCor();
-                        ?>
-                        </tbody>
-                    </table>
-
+                            getCor();
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div>
 
