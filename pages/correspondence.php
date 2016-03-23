@@ -82,6 +82,8 @@
                                 $minutes = 9;
                                 $last = null;
                                 $count = 0;
+                                $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
+                                $text = explode("\n", wordwrap($text, 80));
                                 for ($i = 0; $i < 10; $i++):
                                     $rand = rand(0, 1);
                                     if ($last === $rand) {
@@ -100,7 +102,7 @@
                                         <div class="row msg_container base_sent">
                                             <div class="col-md-10 col-xs-10">
                                                 <div class="messages msg_sent">
-                                                    <p><?= file_get_contents('http://loripsum.net/api/1/short'); ?></p>
+                                                    <p><?= $text[$i] ?></p>
                                                     <time datetime="2009-11-13T20:00">Randy • <?= $minutes ?> min</time>
                                                 </div>
                                             </div>
@@ -115,7 +117,7 @@
                                             </div>
                                             <div class="col-md-10 col-xs-10">
                                                 <div class="messages msg_receive">
-                                                    <p><?= file_get_contents('http://loripsum.net/api/1/short'); ?></p>
+                                                    <p><?= $text[$i] ?></p>
                                                     <time datetime="2009-11-13T20:00">Timothy • <?= $minutes ?> min</time>
                                                 </div>
                                             </div>
