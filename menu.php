@@ -4,7 +4,7 @@
             <a href="<?= $page['url'] ?>"<?= isset($page['items']) ? ' class="dropdown" onclick="return false;"' : '' ?>>
                 <?= $page['name'] ?>
             </a>
-            <?php if ($page['items']): ?>
+            <?php if (isset($page['items'])): ?>
                 <ul class="submenu">
                     <?php foreach ($page['items'] as $item): ?>
                         <li <?= $page['url'] == $components[0] && isset($components[1]) && $components[1] == $item['url'] ? ' class="active"' : '' ?>>
