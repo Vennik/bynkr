@@ -46,44 +46,19 @@
 
                 <div class="clear"></div>
 
-                <!-- Row -->
-                <div class="row">
-
-                    <!-- Col -->
-                    <div class="col-md-7">
-
-                        <div class="page-header">
-                            <h2>Personal documents</h2>
-                        </div>
-
-                        <?php
-
-                        $amount = rand(2, 5);
-
-                        for ($i = 0; $i < $amount; $i++) {
-                            echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
-                        }
-
-                        ?>
-
-                    </div>
-                    <!-- End Col -->
-
-                    <!-- Col -->
-                    <div class="col-md-5">
-
-                        <div class="page-header">
-                            <h2>Personal safe</h2>
-                        </div>
-
-                        <a href="#" class="document"><span class="glyphicon glyphicon-bitcoin"></span><br><p>wallet.dat</p></a>
-                        <a href="#" class="document"><span class="glyphicon glyphicon glyphicon-lock"></span><br><p>id_rsa</p></a>
-
-                    </div>
-                    <!-- End Col -->
-
+                <div class="page-header">
+                    <h2>Personal documents</h2>
                 </div>
-                <!-- End Row -->
+
+                <?php
+
+                $amount = rand(2, 5);
+
+                for ($i = 0; $i < $amount; $i++) {
+                    echo '<a href="#" class="document"><span class="glyphicon ' . $icons[array_rand($icons)] . '"></span><br><p>' . $files[array_rand($files)] . '</p></a>';
+                }
+
+                ?>
 
             </div>
 
