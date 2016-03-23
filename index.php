@@ -2,6 +2,20 @@
 
 session_start();
 
+$pages = [
+    ['url' => 'overview', 'name' => '<i class="fa fa-chevron-down fa-fw"></i> Products', 'items' => [
+        ['url' => 'all', 'name' => 'All Products'],
+        ['url' => 'loans', 'name' => 'Loans'],
+        ['url' => 'mortgages', 'name' => 'Mortgages'],
+        ['url' => 'leases', 'name' => 'Leases'],
+        ['url' => 'insurances', 'name' => 'Insurances'],
+        ['url' => 'credit-cards', 'name' => 'Credit Cards']
+    ]],
+    ['url' => 'correspondence', 'name' => '<i class="fa fa-comment fa-fw"></i> Correspondence'],
+    ['url' => 'vault', 'name' => '<i class="fa fa-lock fa-fw"></i> Personal Vault'],
+    ['url' => 'edit', 'name' => '<i class="fa fa-cog fa-fw"></i> User Settings', 'spacer' => true],
+];
+
 $uri = $_SERVER['REQUEST_URI'];
 $components = explode('?', $uri);
 $components = explode('/', trim($components[0], '/'));
@@ -9,17 +23,11 @@ if (isset($_GET['logout'])) {
     $_SESSION['email'] = null;
 }
 
-$pages = [
-    ['url' => 'all', 'name' => 'All Products'],
-    ['url' => 'loans', 'name' => 'Loans'],
-    ['url' => 'mortgages', 'name' => 'Mortgages'],
-    ['url' => 'leases', 'name' => 'Leases'],
-    ['url' => 'insurances', 'name' => 'Insurances'],
-    ['url' => 'credit-cards', 'name' => 'Credit Cards']
-];
-
 if (empty($components[0])) {
     $components[0] = 'index';
+}
+if (empty($components[1])) {
+    $components[1] = 'all';
 }
 $page = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR . $components[0] . '.php';
 if (!file_exists($page)) {
