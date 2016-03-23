@@ -117,6 +117,7 @@
                                         <span class="badge">' . $messages . '</span>
                                     </td>
                                 </tr>';
+                                $even = !$even;
                             }
 
                         }
