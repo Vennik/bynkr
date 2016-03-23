@@ -1,6 +1,12 @@
 $(function () {
     $('.main-menu > li > a.dropdown').click(setActive);
     $('.upload').click(addFile);
+    $('.refrecconv').click(refreshDiv);
+
+    function refreshDiv() {
+        $('#convo').load(document.URL +  ' #convo');
+        return false;
+    }
 
     function addFile() {
         var file = document.getElementById("selected-file").value;

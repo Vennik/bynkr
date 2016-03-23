@@ -46,25 +46,25 @@
                                 <td>23-3-2016</td>
                                 <td>18:00</td>
                                 <td><span class="label label-success">Whatsapp</span></td>
-                                <td>Refinancing house <span class="badge">4</span></td>
+                                <td><a class = "refrecconv">Refinancing my house</a><span class="badge">4</span></td>
                             </tr>
                             <tr class="odd">
                                 <td>22-3-2016</td>
                                 <td>19:00</td>
                                 <td><span class="label label-primary">Facebook</span></td>
-                                <td>What to do if I lose my phone while abroad? <span class="badge">12</span></td>
+                                <td><a class = "refrecconv">What to do if I lose my phone while abroad?</a> <span class="badge">12</span></td>
                             </tr>
                             <tr class="even">
                                 <td>22-3-2016</td>
                                 <td>20:00</td>
                                 <td><span class="label label-default">Call</span></td>
-                                <td>Question: How do I change my PIN? <span class="badge">1</span></td>
+                                <td><a class = "refrecconv">Question: How do I change my PIN?</a> <span class="badge">1</span></td>
                             </tr>
                             <tr class="odd">
                                 <td>20-3-2016</td>
                                 <td>12:13</td>
                                 <td><span class="label label-warning">ING app</span></td>
-                                <td>Feedback: I love the app <span class="badge">3</span></td>
+                                <td><a class = "refrecconv">Feedback: I love the app <span class="badge">3</span></td>
                             </tr>
 
                             <?php
@@ -106,7 +106,7 @@
                                 <td>' . $date . '</td>
                                 <td>' . $time . '</td>
                                 <td><span class="label label-' . $color . '">' . $platform . '</span></td>
-                                <td>' . $t . ' <span class="badge">' . $messages . '</span></td>
+                                <td><a class = "refrecconv">' . $t . '</a> <span class="badge">' . $messages . '</span></td>
                             </tr>';
                             }
 
@@ -134,8 +134,8 @@
                     <div class="page-header">
                         <h2>Conversation</h2>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-body msg_container_base">
+                    <div class="panel panel-default" >
+                        <div class="panel-body msg_container_base" id="convo">
                             <?php
                             $minutes = 9;
                             $last = null;
