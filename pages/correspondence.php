@@ -32,92 +32,92 @@
 
                     <!-- Table -->
                     <table class="table">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th class="col-md-1">Date</th>
-                                <th class="col-md-1">Time</th>
-                                <th class="col-md-1">Platform</th>
-                                <th class="col-md-10">Title</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="even">
-                                <td>23-3-2016</td>
-                                <td>18:00</td>
-                                <td><span class="label label-success">Whatsapp</span></td>
-                                <td><a class = "refrecconv">Refinancing my house. </a><span class="badge">4</span></td>
-                            </tr>
-                            <tr class="odd">
-                                <td>22-3-2016</td>
-                                <td>19:00</td>
-                                <td><span class="label label-primary">Facebook</span></td>
-                                <td><a class = "refrecconv">What to do if I lose my phone while abroad?</a> <span class="badge">12</span></td>
-                            </tr>
-                            <tr class="even">
-                                <td>22-3-2016</td>
-                                <td>20:00</td>
-                                <td><span class="label label-default">Call</span></td>
-                                <td><a class = "refrecconv">Question: How do I change my PIN?</a> <span class="badge">1</span></td>
-                            </tr>
-                            <tr class="odd">
-                                <td>20-3-2016</td>
-                                <td>12:13</td>
-                                <td><span class="label label-warning">ING app</span></td>
-                                <td><a class = "refrecconv">Feedback: I love the app <span class="badge">3</span></td>
-                            </tr>
+                        <thead>
+                        <tr>
+                            <th class="col-md-1">Date</th>
+                            <th class="col-md-1">Time</th>
+                            <th class="col-md-1">Platform</th>
+                            <th class="col-md-10">Title</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="even">
+                            <td>23-3-2016</td>
+                            <td>18:00</td>
+                            <td><span class="label label-success">Whatsapp</span></td>
+                            <td><a class="refrecconv">Refinancing my house</a> <span class="badge">4</span></td>
+                        </tr>
+                        <tr class="odd">
+                            <td>22-3-2016</td>
+                            <td>19:00</td>
+                            <td><span class="label label-primary">Facebook</span></td>
+                            <td><a class="refrecconv">What to do if I lose my phone while abroad?</a> <span
+                                    class="badge">12</span></td>
+                        </tr>
+                        <tr class="even">
+                            <td>22-3-2016</td>
+                            <td>20:00</td>
+                            <td><span class="label label-default">Call</span></td>
+                            <td><a class="refrecconv">Question: How do I change my PIN?</a> <span class="badge">1</span>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>20-3-2016</td>
+                            <td>12:13</td>
+                            <td><span class="label label-warning">ING app</span></td>
+                            <td><a class="refrecconv">Feedback: I love the app <span class="badge">3</span></td>
+                        </tr>
 
-                            <?php
-                            function getCor($odd)
-                            {
-                                $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
-                                $tuple = $platforms[array_rand($platforms)];
-                                $platform = $tuple[0];
-                                $color = $tuple[1];
-                                $day = rand(1, 29);
-                                $month = rand(1, 9);
-                                $hour = rand(1, 24);
-                                $minutes = rand(1, 59);
-                                $messages = rand(2, 6);
-                                $date = $day . "-" . $month . "-2015";
-                                $time = $hour . ":" . $minutes;
+                        <?php
+                        function getCor($odd)
+                        {
+                            $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
+                            $tuple = $platforms[array_rand($platforms)];
+                            $platform = $tuple[0];
+                            $color = $tuple[1];
+                            $day = rand(1, 29);
+                            $month = rand(1, 9);
+                            $hour = rand(1, 24);
+                            $minutes = rand(1, 59);
+                            $messages = rand(2, 6);
+                            $date = $day . "-" . $month . "-2015";
+                            $time = $hour . ":" . $minutes;
 
-                                $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
-                                $text = array_filter(explode("\n", wordwrap($text, 80)));
-                                $last = null;
-                                $count = 1;
-                                foreach ($text as $t) {
-                                    $rand = rand(1, 2);
-                                    if ($last === $rand) {
-                                        if ($count < 1) {
-                                            $count += 1;
-                                        } else {
-                                            $count = 0;
-                                            $rand = 1 - $rand;
-                                        }
+                            $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
+                            $text = array_filter(explode("\n", wordwrap($text, 80)));
+                            $last = null;
+                            $count = 1;
+                            foreach ($text as $t) {
+                                $rand = rand(1, 2);
+                                if ($last === $rand) {
+                                    if ($count < 1) {
+                                        $count += 1;
                                     } else {
                                         $count = 0;
+                                        $rand = 1 - $rand;
                                     }
-                                    $last = $rand;
-                                    $minutes += rand(1, 5);
+                                } else {
+                                    $count = 0;
                                 }
+                                $last = $rand;
+                                $minutes += rand(1, 5);
+                            }
 
-                                echo '<tr class=' . $odd . '>
+                            echo '<tr class=' . $odd . '>
                                 <td>' . $date . '</td>
                                 <td>' . $time . '</td>
                                 <td><span class="label label-' . $color . '">' . $platform . '</span></td>
                                 <td><a class = "refrecconv">' . $t . '</a> <span class="badge">' . $messages . '</span></td>
                             </tr>';
-                            }
+                        }
 
-                            $amount = rand(3, 8);
-                            for ($i = 0; $i < $amount; $i++) {
-                                getCor("even");
-                                getCor("odd");
-                            }
-                            ?>
-                            </tbody>
-                        </table>
+                        $amount = rand(3, 8);
+                        for ($i = 0; $i < $amount; $i++) {
+                            getCor("even");
+                            getCor("odd");
+                        }
+                        ?>
+                        </tbody>
                     </table>
 
 
@@ -135,14 +135,14 @@
                         <h2>Conversation</h2>
                     </div>
                     <div class="panel panel-default" id="convo">
-                        <div class="panel-body msg_container_base" >
+                        <div class="panel-body msg_container_base">
                             <?php
                             $minutes = 9;
                             $last = null;
                             $count = 0;
                             $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
                             $text = array_filter(explode("\n", wordwrap($text, 80)));
-                            $customerimg = ['customer1','customer2','customer3'];
+                            $customerimg = ['customer1', 'customer2', 'customer3'];
                             $currentcustomer = $customerimg[array_rand($customerimg)];
                             foreach ($text as $t):
                                 $rand = rand(0, 1);
@@ -177,7 +177,8 @@
                                     </div>
                                     <?php if ($rand): ?>
                                         <div class="col-md-2 col-xs-2 avatar">
-                                            <img src="/images/<?php echo $currentcustomer ?>.png" class="img-responsive">
+                                            <img src="/images/<?php echo $currentcustomer ?>.png"
+                                                 class="img-responsive">
                                         </div>
                                     <?php endif ?>
                                 </div>
