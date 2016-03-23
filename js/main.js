@@ -2,10 +2,16 @@ $(function () {
     $('.main-menu > li > a.dropdown').click(setActive);
     $('.upload').click(addFile);
     $('.refrecconv').click(refreshDiv);
+    $('.document').click(openpdf);
 
     function refreshDiv() {
         $('#convo').load(document.URL +  ' #convo');
         return false;
+    }
+
+    function openpdf(e){
+        e.preventDefault();
+        window.location = "example.pdf";
     }
 
     function addFile() {
