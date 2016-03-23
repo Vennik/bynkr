@@ -83,7 +83,7 @@
                         {
                             $platforms = [['Facebook', 'primary'], ['Whatsapp', 'success'], ['ING app', 'warning'], ['Call', 'default']];
 
-                            $text = file_get_contents('http://loripsum.net/api/1/verylong/plaintext');
+                            $text = file_get_contents('http://loripsum.net/api/1/medium/plaintext');
                             $text = array_filter(explode("\n", wordwrap($text, 80)));
                             $last = null;
                             $count = 1;
