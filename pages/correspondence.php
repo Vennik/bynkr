@@ -1,7 +1,7 @@
 <ul class="main-menu">
-    <li>
+    <li class="active">
         <a href="overview" class="dropdown" onclick="return false;"><span
-                class="fa fa-shopping-cart"></span>Products</a>
+                class="glyphicon glyphicon-chevron-down"></span>Products</a>
         <ul class="submenu">
             <?php
 
