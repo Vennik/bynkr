@@ -88,7 +88,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -168,7 +168,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -220,7 +220,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -246,7 +246,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -272,7 +272,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -298,7 +298,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -324,7 +324,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
@@ -350,7 +350,7 @@
                                         </div>
                                         <div class="col-md-2 col-xs-2 avatar">
                                             <img
-                                                src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                                src="images/customer.png"
                                                 class=" img-responsive ">
                                         </div>
                                     </div>
