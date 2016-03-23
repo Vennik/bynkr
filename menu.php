@@ -24,7 +24,7 @@ $pages = [
             <?php if ($page['items']): ?>
                 <ul class="submenu">
                     <?php foreach ($page['items'] as $item): ?>
-                        <li <?= isset($components[1]) && $components[1] == $item['url'] ? ' class="active"' : '' ?>>
+                        <li <?= $page['url'] == $components[0] && isset($components[1]) && $components[1] == $item['url'] ? ' class="active"' : '' ?>>
                             <a href="overview/<?= $item['url'] ?>"><?= $item['name'] ?></a>
                         </li>
                     <?php endforeach ?>
