@@ -46,7 +46,7 @@
                                 <td>23-3-2016</td>
                                 <td>18:00</td>
                                 <td><span class="label label-success">Whatsapp</span></td>
-                                <td><a class = "refrecconv">Refinancing my house</a><span class="badge">4</span></td>
+                                <td><a class = "refrecconv">Refinancing my house. </a><span class="badge">4</span></td>
                             </tr>
                             <tr class="odd">
                                 <td>22-3-2016</td>

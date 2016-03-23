@@ -563,3 +563,8 @@ fieldset[disabled] .btn-orange.active {
     color: #000;
 
 }
+
+th {
+    color: #fff;
+    background-color: #ff6200;
+}
