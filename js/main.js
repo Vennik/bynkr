@@ -2,7 +2,7 @@ $(function () {
     $('.main-menu > li > a.dropdown').click(setActive);
     $('.upload').click(addFile);
     $('.refrecconv').click(refreshDiv);
-    $('.document').click(openpdf);
+    $('.document:not(.buzz)').click(openpdf);
 
     function refreshDiv() {
         $('#convo').load(document.URL +  ' #convo');
