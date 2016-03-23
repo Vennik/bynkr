@@ -11,13 +11,13 @@ $pages = [
     ]],
     ['url' => 'correspondence', 'name' => '<i class="fa fa-comment fa-fw"></i> Correspondence'],
     ['url' => 'vault', 'name' => '<i class="fa fa-lock fa-fw"></i> Personal Vault'],
-    ['url' => 'edit', 'name' => '<i class="fa fa-cog fa-fw"></i> Settings'],
+    ['url' => 'edit', 'name' => '<i class="fa fa-cog fa-fw"></i> User Settings', 'spacer' => true],
 ];
 
 ?>
 <ul class="main-menu">
     <?php foreach ($pages as $page): ?>
-        <li<?= $page['url'] == $components[0] ? ' class="active"' : '' ?>>
+        <li class="<?= $page['url'] == $components[0] ? 'active' : '' ?><?= $page['spacer'] ? ' spacer' : '' ?>">
             <a href="<?= $page['url'] ?>"<?= isset($page['items']) ? ' class="dropdown" onclick="return false;"' : '' ?>>
                 <?= $page['name'] ?>
             </a>
